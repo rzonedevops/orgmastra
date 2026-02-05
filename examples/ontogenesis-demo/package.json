@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "tsx src/index.ts",
     "kernel-evolution": "tsx src/kernel-evolution.ts",
-    "agent-evolution": "tsx src/agent-evolution.ts",
     "population": "tsx src/population-evolution.ts"
   },
   "dependencies": {

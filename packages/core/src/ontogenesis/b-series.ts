@@ -87,8 +87,7 @@ function generateRootedTrees(order: number): number[][][] {
   }
   
   if (order === 4) {
-    // Five trees of order 4 (A000081(4) = 4... actually 5 in some conventions)
-    // Simplified - in reality there are exactly 4 unlabeled rooted trees
+    // Four trees of order 4 (A000081(4) = 4)
     return [
       [[1, 2, 3], [], [], []], // Star: root with three children
       [[1, 2], [3], [], []],   // Root with two children, one has child

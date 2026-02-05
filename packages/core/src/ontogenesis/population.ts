@@ -257,7 +257,7 @@ function calculateGenerationStats(population: Kernel[], generation: number): Gen
     worstFitness: Math.min(...fitnesses),
     diversity: calculatePopulationDiversity(population),
     newKernels: population.filter(k => k.genome.generation === generation).length,
-    optimizations: 0, // Would track this in production
+    optimizations: population.filter(k => k.ontogeneticState.developmentEvents.some(e => e.type === 'optimization')).length,
     timestamp: new Date(),
   };
 }
