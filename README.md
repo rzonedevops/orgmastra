@@ -23,6 +23,65 @@ The main Mastra features are:
 | [RAG](https://mastra.ai/docs/rag/overview)             | Retrieval-augmented generation (RAG) lets you construct a knowledge base for agents. RAG is an ETL pipeline with specific querying techniques, including chunking, embedding, and vector search.                                                                                                       |
 | [Integrations](https://mastra.ai/docs/integrations)    | In Mastra, integrations are auto-generated, type-safe API clients for third-party services that can be used as tools for agents or steps in workflows.                                                                                                                                                 |
 | [Evals](https://mastra.ai/docs/08-running-evals)       | Evals are automated tests that evaluate LLM outputs using model-graded, rule-based, and statistical methods. Each eval returns a normalized score between 0-1 that can be logged and compared. Evals can be customized with your own prompts and scoring functions.                                    |
+| **Ontogenesis** (New!)                                  | Self-evolving computational kernels and agents based on B-Series expansion as genetic code. Enables agents to self-generate, self-optimize, and reproduce through differential calculus, with population-based evolution for continuous improvement.                                                    |
+
+## 🧬 Ontogenetic Evolution (OrgMastra)
+
+**OrgMastra** extends Mastra with self-evolving capabilities inspired by biological development and evolutionary computation. Agents and computational kernels can now:
+
+- **Self-Generate**: Create offspring through recursive composition (chain rule: f∘f)
+- **Self-Optimize**: Improve themselves by maximizing "grip" on their domain
+- **Self-Reproduce**: Combine genetic material via crossover and mutation
+- **Evolve Populations**: Multi-generation evolution with natural selection
+
+### Quick Example
+
+```typescript
+import { 
+  UniversalKernelGenerator, 
+  selfOptimize, 
+  runOntogenesis 
+} from '@mastra/core';
+
+// Generate a consciousness kernel
+const kernel = UniversalKernelGenerator.generateConsciousnessKernel(4);
+
+// Self-optimize to improve domain fit
+const optimized = selfOptimize(kernel, {
+  iterations: 30,
+  learningRate: 0.02,
+});
+
+// Evolve a population over multiple generations
+const result = await runOntogenesis({
+  evolution: {
+    populationSize: 20,
+    mutationRate: 0.15,
+    maxGenerations: 50,
+  },
+  fitnessFunction: (kernel) => kernel.grip.overall,
+});
+
+console.log(`Best fitness: ${result.bestKernel.genome.fitness}`);
+```
+
+### Key Concepts
+
+**Kernel Genome**: The "DNA" of computational structures, implemented as B-Series coefficients (genetic code) and elementary differentials following the A000081 sequence (1, 1, 2, 4, 9, 20, 48...).
+
+**Grip Metric**: Measures how well a kernel fits its domain across four dimensions:
+- Contact (40%): How well the kernel touches the domain
+- Coverage (30%): Completeness of domain span
+- Efficiency (20%): Computational cost
+- Stability (10%): Numerical properties
+
+**Perfect grip (1.0) = Perfect computation in that domain.**
+
+**Domain-Specific Kernels**: Generate specialized kernels for Physics (Hamiltonian trees), Chemistry (reaction networks), Biology (metabolic systems), Computing (recursion), and Consciousness (echo states).
+
+See [examples/ontogenesis-demo](./examples/ontogenesis-demo) for complete working examples.
+
+| **Ontogenesis** (New!)                                  | Self-evolving computational kernels and agents based on B-Series expansion as genetic code. Enables agents to self-generate, self-optimize, and reproduce through differential calculus, with population-based evolution for continuous improvement.                                                    |
 
 ## Quick Start
 
