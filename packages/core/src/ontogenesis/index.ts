@@ -77,3 +77,12 @@ export {
 
 // Universal kernel generator
 export { UniversalKernelGenerator } from './generator';
+
+// Ontogenetic agent extensions
+export type { OntogeneticAgent, InitializeOntogeneticAgentOptions } from './agent';
+export {
+  initializeOntogeneticAgent,
+  serializeAgentGenome,
+  deserializeAgentGenome,
+  evaluateAgentFitness,
+} from './agent';

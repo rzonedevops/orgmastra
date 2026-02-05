@@ -1,0 +1,21 @@
+{
+  "name": "ontogenesis-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "kernel-evolution": "tsx src/kernel-evolution.ts",
+    "agent-evolution": "tsx src/agent-evolution.ts",
+    "population": "tsx src/population-evolution.ts"
+  },
+  "dependencies": {
+    "@mastra/core": "workspace:*",
+    "dotenv": "^16.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.8.3"
+  }
+}
