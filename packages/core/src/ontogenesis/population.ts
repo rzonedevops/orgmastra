@@ -89,7 +89,7 @@ async function initializePopulation(
   for (let i = 0; i < needed; i++) {
     // Generate random kernel
     const domains: DomainType[] = ['physics', 'chemistry', 'biology', 'computing', 'consciousness', 'general'];
-    const domain = domains[Math.floor(Math.random() * 6)] as DomainType;
+    const domain = domains[Math.floor(Math.random() * domains.length)] as DomainType;
     const order = 3 + Math.floor(Math.random() * 3); // Order 3-5
     
     const kernel = initializeOntogeneticKernel(domain, order);
