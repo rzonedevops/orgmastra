@@ -11,6 +11,7 @@ import type {
   EvolutionResult,
   GenerationStats,
   EvolutionConfig,
+  DomainType,
 } from './types';
 import { calculateGrip, calculatePopulationDiversity } from './grip';
 import { selfReproduce, updateDevelopmentStage } from './evolution';
@@ -87,9 +88,8 @@ async function initializePopulation(
   const needed = config.populationSize - population.length;
   for (let i = 0; i < needed; i++) {
     // Generate random kernel
-    const domain = ['physics', 'chemistry', 'biology', 'computing', 'consciousness', 'general'][
-      Math.floor(Math.random() * 6)
-    ] as any;
+    const domains: DomainType[] = ['physics', 'chemistry', 'biology', 'computing', 'consciousness', 'general'];
+    const domain = domains[Math.floor(Math.random() * 6)] as DomainType;
     const order = 3 + Math.floor(Math.random() * 3); // Order 3-5
     
     const kernel = initializeOntogeneticKernel(domain, order);

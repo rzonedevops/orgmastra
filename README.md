@@ -81,8 +81,6 @@ console.log(`Best fitness: ${result.bestKernel.genome.fitness}`);
 
 See [examples/ontogenesis-demo](./examples/ontogenesis-demo) for complete working examples.
 
-| **Ontogenesis** (New!)                                  | Self-evolving computational kernels and agents based on B-Series expansion as genetic code. Enables agents to self-generate, self-optimize, and reproduce through differential calculus, with population-based evolution for continuous improvement.                                                    |
-
 ## Quick Start
 
 ### Prerequisites

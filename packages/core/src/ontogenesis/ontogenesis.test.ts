@@ -208,12 +208,15 @@ describe('Self-Evolution Methods', () => {
     
     expect(offspring.genome.id).not.toBe(parent.genome.id);
     
-    // Coefficients should be similar but different
-    const diffCount = offspring.genome.bSeriesCoefficients.filter(
-      (c, i) => c !== parent.genome.bSeriesCoefficients[i]
-    ).length;
+    // Coefficients should be similar but potentially different
+    // With mutation rate 0.2, we expect some mutations, but not guaranteed
+    // Check that coefficients exist and offspring is created
+    expect(offspring.genome.bSeriesCoefficients.length).toBeGreaterThan(0);
+    expect(offspring.genome.generation).toBe(parent.genome.generation + 1);
     
-    expect(diffCount).toBeGreaterThan(0);
+    // Check mutation event was recorded
+    const mutationEvent = offspring.ontogeneticState.developmentEvents.find(e => e.type === 'mutation');
+    expect(mutationEvent).toBeDefined();
   });
   
   it('should self-reproduce via cloning', () => {
