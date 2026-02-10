@@ -597,6 +597,25 @@ importers:
         specifier: ^4.19.3
         version: 4.20.5
 
+  examples/ontogenesis-demo:
+    dependencies:
+      '@mastra/core':
+        specifier: workspace:*
+        version: link:../../packages/core
+      dotenv:
+        specifier: ^16.6.1
+        version: 16.6.1
+    devDependencies:
+      '@types/node':
+        specifier: ^20.17.57
+        version: 20.19.13
+      tsx:
+        specifier: ^4.20.5
+        version: 4.20.5
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
+
   explorations/longmemeval:
     dependencies:
       '@ai-sdk/openai':
